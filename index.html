@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>クエリフォーム</title>
+        <link rel="stylesheet" type="text/css" href="stylesheet.css">
+        <style>
+            .submit_button {
+                float: right;
+            }
+            .input_fav {
+                width: 60px;
+            }
+        </style>
+    </head>
+    
+    <body>
+        <h1>Twitter画像保存サービス</h1>
+        <p></p>
+        
+        <form method="POST" action="tweetpictures.php">
+            <input type="hidden" name="isFirst" value=1>
+            <table border="1">
+                <tr>
+                    <td colspan="2">クエリ</td>
+                    <td><input type="text" name="query" size="30"></td>
+                </tr>
+                
+                <tr>
+                    <td colspan="2">ディレクトリ</td>
+                    <td><input type="text" name="directory" size="30"></td>
+                </tr>
+                
+                
+                <tr>
+                    <td>保存ファボ数下限</td>
+                    <td><input class="input_fav" type="number" name="fav_num" value="50"></td>
+                    <td>
+                    <input type="submit" name="sub1" value="保存"  class="submit_button" >
+                    </td>
+                </tr>
+            </table>
+            </form>
+    </body>
+</html>
